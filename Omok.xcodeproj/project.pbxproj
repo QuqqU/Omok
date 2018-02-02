@@ -32,6 +32,7 @@
 		6795A2C52024E52700019E57 /* placed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2BA2024E52700019E57 /* placed.png */; };
 		6795A2C62024E52700019E57 /* placeholder_pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2BB2024E52700019E57 /* placeholder_pt.png */; };
 		6795A2C82024E5AA00019E57 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2C72024E5AA00019E57 /* LICENSE.txt */; };
+		6795A2CC2024E73E00019E57 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2CB2024E73E00019E57 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		6795A2BA2024E52700019E57 /* placed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placed.png; sourceTree = "<group>"; };
 		6795A2BB2024E52700019E57 /* placeholder_pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_pt.png; sourceTree = "<group>"; };
 		6795A2C72024E5AA00019E57 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		6795A2CB2024E73E00019E57 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		6795A2802024E4F200019E57 = {
 			isa = PBXGroup;
 			children = (
+				6795A2CB2024E73E00019E57 /* README.md */,
 				6795A2C72024E5AA00019E57 /* LICENSE.txt */,
 				6795A28B2024E4F200019E57 /* Omok */,
 				6795A28A2024E4F200019E57 /* Products */,
@@ -213,6 +216,7 @@
 				6795A2C82024E5AA00019E57 /* LICENSE.txt in Resources */,
 				6795A2C22024E52700019E57 /* placeholder.png in Resources */,
 				6795A2BD2024E52700019E57 /* empty.png in Resources */,
+				6795A2CC2024E73E00019E57 /* README.md in Resources */,
 				6795A2C12024E52700019E57 /* empty_pt.png in Resources */,
 				6795A2922024E4F200019E57 /* Main.storyboard in Resources */,
 				6795A2BE2024E52700019E57 /* borderRight.png in Resources */,
