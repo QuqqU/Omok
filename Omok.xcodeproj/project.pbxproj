@@ -98,12 +98,12 @@
 		6795A28B2024E4F200019E57 /* Omok */ = {
 			isa = PBXGroup;
 			children = (
-				6795A28C2024E4F200019E57 /* AppDelegate.swift */,
 				6795A2902024E4F200019E57 /* Main.storyboard */,
 				6795A2952024E4F200019E57 /* LaunchScreen.storyboard */,
 				6795A2982024E4F200019E57 /* Info.plist */,
 				6795A2932024E4F200019E57 /* Assets.xcassets */,
 				6795A2B02024E52700019E57 /* resource */,
+				6795A28C2024E4F200019E57 /* AppDelegate.swift */,
 				6795A2A42024E51D00019E57 /* Define.swift */,
 				6795A2A12024E51D00019E57 /* Manager.swift */,
 				6795A2CA2024E61500019E57 /* GameBoard */,
