@@ -17,7 +17,9 @@ class BeginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         
+        startButton.setBackgroundImage(UIImage(named: "start.png"), for: .normal)
     }
     
     @IBAction func start(_ sender: UIButton) {
