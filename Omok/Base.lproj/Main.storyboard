@@ -13,6 +13,9 @@
         <array key="Binggrae.ttf">
             <string>Binggrae</string>
         </array>
+        <array key="GodoM.ttf">
+            <string>GodoM</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Main View Controller-->
@@ -47,17 +50,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQY-fh-lly">
-                                <rect key="frame" x="103" y="252" width="169" height="163"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQY-fh-lly">
+                                <rect key="frame" x="5" y="69" width="365" height="593"/>
                                 <fontDescription key="fontDescription" name="Binggrae" family="Binggrae" pointSize="45"/>
-                                <state key="normal" title="Start"/>
+                                <state key="normal" title="시작하냐?"/>
                                 <connections>
                                     <action selector="start:" destination="V8Z-1o-3ES" eventType="touchUpInside" id="A2H-nP-Lvy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yOg-MF-wmN" firstAttribute="bottom" secondItem="UQY-fh-lly" secondAttribute="bottom" constant="5" id="ELd-Ut-bAR"/>
+                            <constraint firstItem="UQY-fh-lly" firstAttribute="top" secondItem="yOg-MF-wmN" secondAttribute="top" constant="5" id="Oe6-Uc-h9E"/>
+                            <constraint firstItem="UQY-fh-lly" firstAttribute="leading" secondItem="yOg-MF-wmN" secondAttribute="leading" constant="5" id="XOv-Me-0k1"/>
+                            <constraint firstItem="yOg-MF-wmN" firstAttribute="trailing" secondItem="UQY-fh-lly" secondAttribute="trailing" constant="5" id="Zlq-wc-13e"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yOg-MF-wmN"/>
                     </view>
                     <navigationItem key="navigationItem" id="xI8-Wa-DnD"/>
@@ -74,16 +82,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv6-c2-jUu">
-                                <rect key="frame" x="313" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="RJh-m3-1n5" kind="show" id="BdQ-BK-1Ft">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Vs-Sg-T3u">
                                 <rect key="frame" x="-103" y="358" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -91,13 +89,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="가나다라마바사아자차타카파하" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNz-ca-RKg">
-                                <rect key="frame" x="16" y="313" width="191" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv6-c2-jUu">
+                                <rect key="frame" x="53" y="241" width="269" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="37"/>
+                                <state key="normal" title="앙 시작버튼 띠"/>
+                                <connections>
+                                    <segue destination="RJh-m3-1n5" kind="show" id="BdQ-BK-1Ft">
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5YO-ic-EYO"/>
@@ -106,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vuc-u9-MsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-385" y="361"/>
+            <point key="canvasLocation" x="-386.39999999999998" y="360.2698650674663"/>
         </scene>
         <!--GameViewController-->
         <scene sceneID="4a3-8P-Ksi">
