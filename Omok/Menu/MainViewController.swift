@@ -11,14 +11,17 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    let SLIDE_TIME = 0.5
+    let LISTVIEW_WIDTH: CGFloat = UIScreen.main.bounds.width
+    
+    
+    
     var listVC: UIViewController?
     var beginVC: UIViewController?
     
     var isBeginViewShowing = true
     
-    let SLIDE_TIME = 0.5
-    let LISTVIEW_WIDTH: CGFloat = UIScreen.main.bounds.width
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,9 +11,11 @@ import UIKit
 
 class BeginViewController: UIViewController {
     
+    var delegate: MainViewController?
+    
     @IBOutlet weak var startButton: UIButton!
     
-    var delegate: MainViewController?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,9 @@ class BeginViewController: UIViewController {
         
         startButton.setBackgroundImage(UIImage(named: "start.png"), for: .normal)
     }
+    
+    
+    
     
     @IBAction func start(_ sender: UIButton) {
         print("Start button touched")
