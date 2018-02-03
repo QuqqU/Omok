@@ -11,6 +11,7 @@ import UIKit
 
 class BeginViewController: UIViewController {
     
+    @IBOutlet weak var startButton: UIButton!
     
     var delegate: MainViewController?
     
