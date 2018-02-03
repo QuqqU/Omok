@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6756EE1E20260402003620B0 /* GodoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6756EE1C20260370003620B0 /* GodoM.ttf */; };
+		6756EE202026062C003620B0 /* Binggrae.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6756EE1F2026062C003620B0 /* Binggrae.ttf */; };
 		6795A28D2024E4F200019E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6795A28C2024E4F200019E57 /* AppDelegate.swift */; };
 		6795A2922024E4F200019E57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2902024E4F200019E57 /* Main.storyboard */; };
 		6795A2942024E4F200019E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2932024E4F200019E57 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6756EE1C20260370003620B0 /* GodoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoM.ttf; sourceTree = "<group>"; };
+		6756EE1F2026062C003620B0 /* Binggrae.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Binggrae.ttf; sourceTree = "<group>"; };
 		6795A2892024E4F200019E57 /* Omok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6795A28C2024E4F200019E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6795A2912024E4F200019E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6756EE1D202603D9003620B0 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				6756EE1C20260370003620B0 /* GodoM.ttf */,
+				6756EE1F2026062C003620B0 /* Binggrae.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 		6795A2802024E4F200019E57 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +115,7 @@
 				6795A2952024E4F200019E57 /* LaunchScreen.storyboard */,
 				6795A2982024E4F200019E57 /* Info.plist */,
 				6795A2932024E4F200019E57 /* Assets.xcassets */,
+				6756EE1D202603D9003620B0 /* font */,
 				6795A2B02024E52700019E57 /* resource */,
 				6795A28C2024E4F200019E57 /* AppDelegate.swift */,
 				6795A2A42024E51D00019E57 /* Define.swift */,
@@ -216,6 +230,8 @@
 				6795A2C82024E5AA00019E57 /* LICENSE.txt in Resources */,
 				6795A2C22024E52700019E57 /* placeholder.png in Resources */,
 				6795A2BD2024E52700019E57 /* empty.png in Resources */,
+				6756EE1E20260402003620B0 /* GodoM.ttf in Resources */,
+				6756EE202026062C003620B0 /* Binggrae.ttf in Resources */,
 				6795A2CC2024E73E00019E57 /* README.md in Resources */,
 				6795A2C12024E52700019E57 /* empty_pt.png in Resources */,
 				6795A2922024E4F200019E57 /* Main.storyboard in Resources */,
