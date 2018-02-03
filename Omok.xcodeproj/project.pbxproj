@@ -11,6 +11,7 @@
 		6756EE202026062C003620B0 /* Binggrae.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6756EE1F2026062C003620B0 /* Binggrae.ttf */; };
 		6756EE2220261782003620B0 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 6756EE2120261781003620B0 /* start.png */; };
 		6756EE242026187D003620B0 /* menu1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6756EE232026187C003620B0 /* menu1.png */; };
+		6756EE2620262838003620B0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6756EE2520262837003620B0 /* LICENSE */; };
 		6795A28D2024E4F200019E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6795A28C2024E4F200019E57 /* AppDelegate.swift */; };
 		6795A2922024E4F200019E57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2902024E4F200019E57 /* Main.storyboard */; };
 		6795A2942024E4F200019E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2932024E4F200019E57 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		6756EE1F2026062C003620B0 /* Binggrae.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Binggrae.ttf; sourceTree = "<group>"; };
 		6756EE2120261781003620B0 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		6756EE232026187C003620B0 /* menu1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu1.png; sourceTree = "<group>"; };
+		6756EE2520262837003620B0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6795A2892024E4F200019E57 /* Omok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6795A28C2024E4F200019E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6795A2912024E4F200019E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		6795A2802024E4F200019E57 = {
 			isa = PBXGroup;
 			children = (
+				6756EE2520262837003620B0 /* LICENSE */,
 				6795A2CB2024E73E00019E57 /* README.md */,
 				6795A28B2024E4F200019E57 /* Omok */,
 				6795A28A2024E4F200019E57 /* Products */,
@@ -241,6 +244,7 @@
 				6795A2922024E4F200019E57 /* Main.storyboard in Resources */,
 				6795A2BE2024E52700019E57 /* borderRight.png in Resources */,
 				6795A2BC2024E52700019E57 /* uncreated.png in Resources */,
+				6756EE2620262838003620B0 /* LICENSE in Resources */,
 				6795A2C62024E52700019E57 /* placeholder_pt.png in Resources */,
 				6795A2C42024E52700019E57 /* borderTop.png in Resources */,
 				6795A2C52024E52700019E57 /* placed.png in Resources */,
