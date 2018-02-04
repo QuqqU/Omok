@@ -12,17 +12,27 @@ import UIKit
 class ListViewController: UIViewController {
    
     
+    @IBOutlet weak var gameStartButton: StartButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-
+        setButton()
         
  
     }
     
 
-    
+    func setButton() {
+        let buttonLength: CGFloat = MainViewController.BUTTON_LENGTH
+        
+        self.gameStartButton.frame = CGRect(x: (UIScreen.main.bounds.width - buttonLength) / 2,
+                                            y: (UIScreen.main.bounds.height - buttonLength) / 2,
+                                            width: buttonLength,
+                                            height: buttonLength)
+        
+        
+    }
     
     
 }

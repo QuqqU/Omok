@@ -8,10 +8,13 @@
 
 import UIKit
 
+
 class DrawCGView: UIView {
     let buttonLength: CGFloat = MainViewController.BUTTON_LENGTH
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
+    
+    static var isListView = false
     
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
@@ -19,9 +22,22 @@ class DrawCGView: UIView {
                               y: height / 2))
         path.addLine(to: CGPoint(x: width,
                                  y: height / 2))
+        
+
+        if DrawCGView.isListView {
+            path.move(to: CGPoint(x: 0,
+                                  y: height / 2))
+            path.addLine(to: CGPoint(x: (width - buttonLength) / 2,
+                                     y: height / 2))
+        }
+        DrawCGView.isListView = true
+        
         path.lineWidth = 5
         UIColor.white.setStroke()
         path.stroke()
+        
+        
+        
     }
     
 }
