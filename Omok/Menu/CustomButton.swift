@@ -9,7 +9,7 @@
 import UIKit
 
 
-class StartButton: UIButton {
+class CustomButton: UIButton {
 
     let LENGTH: CGFloat = MainViewController.BUTTON_LENGTH
     

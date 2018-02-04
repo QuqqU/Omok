@@ -12,7 +12,7 @@ import UIKit
 class ListViewController: UIViewController {
    
     
-    @IBOutlet weak var gameStartButton: StartButton!
+    @IBOutlet weak var gameStartButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
