@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.93915349578589069" green="0.95722057401979688" blue="0.85521732410881701" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.85398203016201002" green="0.8704106120908629" blue="0.77765799728085461" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="yOg-MF-wmN"/>
                     </view>
                     <navigationItem key="navigationItem" id="xI8-Wa-DnD"/>
@@ -99,7 +99,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.93915349579999996" green="0.95722057400000005" blue="0.85521732409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.85398203019999996" green="0.87041061210000004" blue="0.77765799729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="5YO-ic-EYO"/>
                     </view>
                     <navigationItem key="navigationItem" title="첫 화면" id="nLa-JT-36V"/>
@@ -118,7 +118,7 @@
                     <view key="view" contentMode="scaleToFill" id="hVI-2x-zUh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.85398203019999996" green="0.87041061210000004" blue="0.77765799729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="k2x-QF-8us"/>
                     </view>
