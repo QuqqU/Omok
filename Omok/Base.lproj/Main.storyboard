@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.81976586579999999" green="0.84395915269999999" blue="0.79213863610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.76279970290042132" green="0.8892676869639593" blue="0.76107676986966466" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="yOg-MF-wmN"/>
                     </view>
                     <navigationItem key="navigationItem" id="xI8-Wa-DnD"/>
@@ -99,7 +99,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.81976586579999999" green="0.84395915269999999" blue="0.79213863610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.76279970289999999" green="0.88926768700000003" blue="0.76107676989999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="5YO-ic-EYO"/>
                     </view>
                     <navigationItem key="navigationItem" title="첫 화면" id="nLa-JT-36V"/>
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYn-Ya-E3U" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="34"/>
+            <point key="canvasLocation" x="1234" y="360"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pun-f1-VxL">
