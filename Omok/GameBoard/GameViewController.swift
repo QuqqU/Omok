@@ -14,6 +14,10 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //forbid swipe to previous view
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
         let height = Manager.manager.height
         let width = Manager.manager.width
      
