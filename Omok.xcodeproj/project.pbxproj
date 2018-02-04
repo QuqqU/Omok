@@ -12,6 +12,7 @@
 		6756EE2220261782003620B0 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 6756EE2120261781003620B0 /* start.png */; };
 		6756EE2620262838003620B0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6756EE2520262837003620B0 /* LICENSE */; };
 		6756EE282026DA71003620B0 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6756EE272026DA71003620B0 /* StartButton.swift */; };
+		6756EE2A20270196003620B0 /* DrawCGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6756EE2920270196003620B0 /* DrawCGView.swift */; };
 		6795A28D2024E4F200019E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6795A28C2024E4F200019E57 /* AppDelegate.swift */; };
 		6795A2922024E4F200019E57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2902024E4F200019E57 /* Main.storyboard */; };
 		6795A2942024E4F200019E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2932024E4F200019E57 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		6756EE2120261781003620B0 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		6756EE2520262837003620B0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6756EE272026DA71003620B0 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		6756EE2920270196003620B0 /* DrawCGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawCGView.swift; path = Omok/Menu/DrawCGView.swift; sourceTree = "<group>"; };
 		6795A2892024E4F200019E57 /* Omok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6795A28C2024E4F200019E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6795A2912024E4F200019E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		6795A2802024E4F200019E57 = {
 			isa = PBXGroup;
 			children = (
+				6756EE2920270196003620B0 /* DrawCGView.swift */,
 				6756EE2520262837003620B0 /* LICENSE */,
 				6795A2CB2024E73E00019E57 /* README.md */,
 				6795A28B2024E4F200019E57 /* Omok */,
@@ -265,6 +268,7 @@
 				6756EE282026DA71003620B0 /* StartButton.swift in Sources */,
 				6795A2AD2024E51D00019E57 /* Define.swift in Sources */,
 				6795A2A82024E51D00019E57 /* BeginViewController.swift in Sources */,
+				6756EE2A20270196003620B0 /* DrawCGView.swift in Sources */,
 				6795A2AA2024E51D00019E57 /* Manager.swift in Sources */,
 				6795A28D2024E4F200019E57 /* AppDelegate.swift in Sources */,
 				6795A2AC2024E51D00019E57 /* Cell.swift in Sources */,

@@ -46,12 +46,12 @@
         <scene sceneID="9pZ-51-bM2">
             <objects>
                 <viewController storyboardIdentifier="begin_view" id="V8Z-1o-3ES" customClass="BeginViewController" customModule="Omok" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qiK-YJ-zpP">
+                    <view key="view" contentMode="scaleToFill" id="qiK-YJ-zpP" customClass="DrawCGView" customModule="Omok" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQY-fh-lly" customClass="StartButton" customModule="Omok" customModuleProvider="target">
-                                <rect key="frame" x="63" y="297" width="249" height="73"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQY-fh-lly" customClass="StartButton" customModule="Omok" customModuleProvider="target">
+                                <rect key="frame" x="63" y="297" width="249" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Binggrae" family="Binggrae" pointSize="45"/>
                                 <state key="normal" title="Start"/>
