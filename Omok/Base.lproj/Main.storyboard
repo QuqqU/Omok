@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Binggrae.ttf">
+            <string>Binggrae</string>
+        </array>
         <array key="GodoM.ttf">
             <string>GodoM</string>
         </array>
@@ -50,7 +53,8 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQY-fh-lly" customClass="StartButton" customModule="Omok" customModuleProvider="target">
                                 <rect key="frame" x="63" y="297" width="249" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="!!"/>
+                                <fontDescription key="fontDescription" name="Binggrae" family="Binggrae" pointSize="45"/>
+                                <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="start:" destination="V8Z-1o-3ES" eventType="touchUpInside" id="A2H-nP-Lvy"/>
                                 </connections>
