@@ -8,8 +8,7 @@
 
 import UIKit
 
-
-class DrawCGView: UIView {
+@IBDesignable class DrawCGView: UIView {
     let buttonLength: CGFloat = MainViewController.BUTTON_LENGTH
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height

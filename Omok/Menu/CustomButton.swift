@@ -8,13 +8,13 @@
 
 import UIKit
 
-
-class CustomButton: UIButton {
+@IBDesignable class CustomButton: UIButton {
 
     let LENGTH: CGFloat = MainViewController.BUTTON_LENGTH
     
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
+    
         
         
         //make
