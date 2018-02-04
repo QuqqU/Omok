@@ -11,6 +11,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    static let BUTTON_LENGTH: CGFloat = 200
     let SLIDE_TIME = 0.5
     let LISTVIEW_WIDTH: CGFloat = UIScreen.main.bounds.width
     

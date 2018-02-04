@@ -8,14 +8,30 @@
 
 import UIKit
 
+@IBDesignable
 class StartButton: UIButton {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
+    let LENGTH: CGFloat = MainViewController.BUTTON_LENGTH
+    
     override func draw(_ rect: CGRect) {
-        // Drawing code
+        let path = UIBezierPath()
+        
+        path.move(to: CGPoint(x: 0,
+                              y: LENGTH / 2))
+        path.addLine(to: CGPoint(x: LENGTH / 2,
+                                 y: 0))
+        path.addLine(to: CGPoint(x: LENGTH,
+                                 y: LENGTH / 2))
+        path.addLine(to: CGPoint(x: LENGTH / 2,
+                                 y: LENGTH))
+        path.addLine(to: CGPoint(x: 0,
+                                 y: LENGTH / 2))
+    
+        path.lineWidth = 3
+        UIColor.black.setStroke()
+        path.stroke()
     }
-    */
+ 
 
+    
 }

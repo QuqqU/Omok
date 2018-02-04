@@ -11,6 +11,8 @@ import UIKit
 
 class BeginViewController: UIViewController {
     
+    
+    let buttonLength: CGFloat = MainViewController.BUTTON_LENGTH
     var delegate: MainViewController?
     
     @IBOutlet weak var startButton: UIButton!
@@ -21,11 +23,20 @@ class BeginViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         
-        startButton.setBackgroundImage(UIImage(named: "start.png"), for: .normal)
+      
+        setButton()
+        
     }
     
     
-    
+    func setButton() {
+        
+        
+        self.startButton.frame = CGRect(x: (UIScreen.main.bounds.width - buttonLength) / 2,
+                                        y: (UIScreen.main.bounds.height - buttonLength) / 2,
+                                        width: buttonLength,
+                                        height: buttonLength)
+    }
     
     @IBAction func start(_ sender: UIButton) {
         print("Start button touched")
