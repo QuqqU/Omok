@@ -17,11 +17,12 @@ class GameBoardView: UIView {
             Manager.manager.board.append([Cell]())
             makeColumn : for x in 0..<num {
                 let width = frame.width
+                let height = frame.height
                 var isCirclePoint = false
                 
                 if [3, 9, 15].contains(x) && [3, 9, 15].contains(y) { isCirclePoint = true }
                 let cell = Cell(frame: CGRect(x: width / CGFloat(num) * CGFloat(x),
-                                              y: width / CGFloat(num) * CGFloat(y),
+                                              y: width / CGFloat(num) * CGFloat(y) + (height-width)/2,
                                               width: width / CGFloat(num),
                                               height: width / CGFloat(num)),
                                 isCirclePoint: isCirclePoint, x: x, y: y)
