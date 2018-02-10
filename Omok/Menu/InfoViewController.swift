@@ -23,6 +23,8 @@ class InfoViewController: UIViewController {
         
         self.infoView.frame.origin = CGPoint(x: (width - viewWidth) / 2,
                                              y: (height - viewHeight) / 2)
+        print((width - viewWidth) / 2)
+        print((height - viewHeight) / 2)
     }
     
 }
