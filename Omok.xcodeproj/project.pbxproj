@@ -13,6 +13,8 @@
 		6756EE2220261782003620B0 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 6756EE2120261781003620B0 /* start.png */; };
 		6756EE2620262838003620B0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6756EE2520262837003620B0 /* LICENSE */; };
 		6756EE282026DA71003620B0 /* CustomStartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6756EE272026DA71003620B0 /* CustomStartButton.swift */; };
+		675A2861202F317C007B6D77 /* AIGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675A2860202F317C007B6D77 /* AIGameViewController.swift */; };
+		675A2863202F35FD007B6D77 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675A2862202F35FD007B6D77 /* InfoViewController.swift */; };
 		6795A28D2024E4F200019E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6795A28C2024E4F200019E57 /* AppDelegate.swift */; };
 		6795A2922024E4F200019E57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2902024E4F200019E57 /* Main.storyboard */; };
 		6795A2942024E4F200019E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6795A2932024E4F200019E57 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		6756EE2120261781003620B0 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		6756EE2520262837003620B0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6756EE272026DA71003620B0 /* CustomStartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStartButton.swift; sourceTree = "<group>"; };
+		675A2860202F317C007B6D77 /* AIGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIGameViewController.swift; sourceTree = "<group>"; };
+		675A2862202F35FD007B6D77 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		6795A2892024E4F200019E57 /* Omok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6795A28C2024E4F200019E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6795A2912024E4F200019E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				6795A2A62024E51D00019E57 /* MainViewController.swift */,
 				6795A29F2024E51D00019E57 /* BeginViewController.swift */,
 				6795A29E2024E51D00019E57 /* ListViewController.swift */,
+				675A2862202F35FD007B6D77 /* InfoViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				6795A2A02024E51D00019E57 /* GameBoardFrameView.swift */,
 				6795A2A52024E51D00019E57 /* GameBoardView.swift */,
 				6795A2A22024E51D00019E57 /* GameViewController.swift */,
+				675A2860202F317C007B6D77 /* AIGameViewController.swift */,
 			);
 			path = GameBoard;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6795A2AB2024E51D00019E57 /* GameViewController.swift in Sources */,
+				675A2861202F317C007B6D77 /* AIGameViewController.swift in Sources */,
 				6795A2AF2024E51D00019E57 /* MainViewController.swift in Sources */,
 				6795A2AE2024E51D00019E57 /* GameBoardView.swift in Sources */,
 				6756EE282026DA71003620B0 /* CustomStartButton.swift in Sources */,
@@ -255,6 +262,7 @@
 				6795A2A82024E51D00019E57 /* BeginViewController.swift in Sources */,
 				6795A2AA2024E51D00019E57 /* Manager.swift in Sources */,
 				6795A28D2024E4F200019E57 /* AppDelegate.swift in Sources */,
+				675A2863202F35FD007B6D77 /* InfoViewController.swift in Sources */,
 				6795A2AC2024E51D00019E57 /* Cell.swift in Sources */,
 				6795A2A92024E51D00019E57 /* GameBoardFrameView.swift in Sources */,
 				6795A2A72024E51D00019E57 /* ListViewController.swift in Sources */,
