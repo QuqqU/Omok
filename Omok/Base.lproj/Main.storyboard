@@ -16,6 +16,9 @@
         <array key="GodoM.ttf">
             <string>GodoM</string>
         </array>
+        <array key="TrebuchetMS.ttf">
+            <string>TrebuchetMS</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Main View Controller-->
@@ -50,8 +53,26 @@
                                     <action selector="start:" destination="V8Z-1o-3ES" eventType="touchUpInside" id="A2H-nP-Lvy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2S-UP-nzL">
+                                <rect key="frame" x="5" y="608" width="50" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="aPf-Xw-GYL"/>
+                                    <constraint firstAttribute="width" constant="50" id="ajC-fA-uit"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="39"/>
+                                <state key="normal" title="i">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="information:" destination="V8Z-1o-3ES" eventType="touchUpInside" id="zfn-eH-thB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="yOg-MF-wmN" firstAttribute="bottom" secondItem="K2S-UP-nzL" secondAttribute="bottom" constant="5" id="dcy-B7-a8e"/>
+                            <constraint firstItem="K2S-UP-nzL" firstAttribute="leading" secondItem="yOg-MF-wmN" secondAttribute="leading" constant="5" id="uQn-Ij-tx3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yOg-MF-wmN"/>
                     </view>
                     <navigationItem key="navigationItem" id="xI8-Wa-DnD"/>

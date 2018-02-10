@@ -35,4 +35,11 @@ class BeginViewController: UIViewController {
         }
     }
 
+    @IBAction func information(_ sender: UIButton) {
+        print("Info button touched")
+        
+        
+    }
+    
+    
 }
