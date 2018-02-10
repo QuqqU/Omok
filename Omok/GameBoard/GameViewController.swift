@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     
     var gameBoardFrameView: GameBoardFrameView!
+    var delegate: MainViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,10 @@ class GameViewController: UIViewController {
         self.view.addSubview(self.gameBoardFrameView!)
     }
     
+  
     @IBAction func goBack(_ sender: Any) {
+        print("Going to ListView Button touched")
+        self.delegate?.backToList()
     }
     
 }
