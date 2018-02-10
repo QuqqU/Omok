@@ -42,7 +42,7 @@ class Manager {
         toEmptyState : for y in 0..<19 {
             for x in 0..<19 {
                 let cell = tempBoard[y][x]
-                if cell == .uncreated || cell == .border {
+                if cell == .uncreated {
                     for dy in -1..<2 {
                         for dx in -1..<2 {
                             if 0..<19 ~= y+dy && 0..<19 ~= x+dx {
@@ -56,71 +56,6 @@ class Manager {
                 }
             }
         }
-        
-        tempBoard = self.board.map{$0.map{$0.cellState}}
-        toBorderState : for y in 0..<19 {
-            for x in 0..<19 {
-                let cell = tempBoard[y][x]
-                if cell == .uncreated {
-                    for theta in 0..<4 {
-                        let dx = Int(cos(Float(theta)*Float.pi/2))
-                        let dy = Int(sin(Float(theta)*Float.pi/2))
-                        if 0..<19 ~= y+dy && 0..<19 ~= x+dx {
-                            let neighbor = tempBoard[y+dy][x+dx]
-                            if neighbor == .empty {
-                                self.board[y][x].changeCellState(.border)
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        tempBoard = self.board.map{$0.map{$0.cellState}}
-        setBorderImage : for y in 0..<19 {
-            for x in 0..<19 {
-                let cell = tempBoard[y][x]
-                if cell == .border {
-                    for theta in 0..<4 {
-                        var state = [0, 0, 0, 0]
-                        let dx = Int(cos(Float(theta)*Float.pi/2))
-                        let dy = Int(sin(Float(theta)*Float.pi/2))
-                        if 0..<19 ~= y+dy && 0..<19 ~= x+dx {
-                            let neighbor = tempBoard[y+dy][x+dx]
-                            if neighbor == .empty {
-                                state[theta] = 1
-                            }
-                        }
-                        if (state == [1,0,0,0]) {
-                            self.board[y][x].changeImage(named: "borderLeft")
-                        } else if (state == [0,1,0,0]) {
-                            self.board[y][x].changeImage(named: "borderTop")
-                        } else if (state == [0,0,1,0]) {
-                            self.board[y][x].changeImage(named: "borderRight")
-                        } else if (state == [0,0,0,1]) {
-                            self.board[y][x].changeImage(named: "borderBottom")
-                            
-                        } else if (state == [1,1,0,0]) {
-                            self.board[y][x].changeImage(named: "borderLeft")
-                        } else if (state == [0,1,1,0]) {
-                            self.board[y][x].changeImage(named: "borderLeft")
-                        } else if (state == [0,0,1,1]) {
-                            self.board[y][x].changeImage(named: "borderLeft")
-                        } else if (state == [1,0,0,1]) {
-                            self.board[y][x].changeImage(named: "borderLeft")
-                            
-                        } else if (state == [1,0,1,0]) {
-                            self.board[y][x].changeImage(named: "borderLeft")
-                        } else if (state == [0,1,0,1]) {
-                            self.board[y][x].changeImage(named: "borderLeft")
-                            
-                        } else if (state == [1,1,1,0]) {
-                            self.board[y][x].changeImage(named: "borderLeft")
-                        }
-                    }
-                }
-            }
-        }
-        
     }
 }
 
