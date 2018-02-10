@@ -20,18 +20,13 @@ class ListViewController: UIViewController {
     @IBOutlet weak var emptyLeft: CustomListButton!
     @IBOutlet weak var emptyRight: CustomListButton!
     
-    
-    
-    
-    
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         setButton()
     }
     
-
     func setButton() {
         self.gameStartButton.frame = CGRect(x: width / 2 + 15,
                                             y: height / 2 - buttonLength - 15,

@@ -54,17 +54,12 @@ class MainViewController: UIViewController {
             self.addChildViewController(vc)
             self.view.addSubview(vc.view)
             vc.didMove(toParentViewController: self)
-            self.view.bringSubview(toFront: (self.beginVC?.view)!)
-            //self.listVC?.view.frame.origin.x = LISTVIEW_WIDTH
-        }
+            self.view.bringSubview(toFront: (self.beginVC?.view)!)        }
     }
     
     func openListView(_ complete: ( () -> Void )?) {
         print("Turn to List View")
-        
         self.getListView()
-        
-        //let options = UIViewAnimationOptions([.curveEaseInOut, .beginFromCurrentState])
         
         UIView.animate(withDuration: TimeInterval(self.SLIDE_TIME),
                        animations: { self.beginVC?.view.alpha = 0 },
@@ -73,26 +68,6 @@ class MainViewController: UIViewController {
                                        animations: { self.listVC?.view.alpha = 1 },
                                        completion: nil)
         })
-        
-//        UIView.animate(withDuration: TimeInterval(self.SLIDE_TIME),
-//                       delay: TimeInterval(0),
-//                       options: options,
-//                       animations: {
-//                        self.beginVC?.view.frame = CGRect(x: -self.LISTVIEW_WIDTH,
-//                                                         y: 0,
-//                                                         width: self.view.frame.width,
-//                                                         height: self.view.frame.height)
-//                        self.listVC?.view.frame = CGRect(x: 0,
-//                                                         y: 0,
-//                                                         width: self.view.frame.width,
-//                                                         height: self.view.frame.height)
-//        },
-//                       completion: {
-//                        if $0 == true {
-//                            self.isBeginViewShowing = false
-//                            complete?()
-//                        }
-//        })
     }
     
 }
