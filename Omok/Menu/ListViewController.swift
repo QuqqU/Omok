@@ -11,27 +11,42 @@ import UIKit
 
 class ListViewController: UIViewController {
    
+    let buttonLength: CGFloat = MainViewController.LIST_BUTTON_LENGTH
+    let width = UIScreen.main.bounds.width
+    let height = UIScreen.main.bounds.height
     
-    @IBOutlet weak var gameStartButton: CustomButton!
+    @IBOutlet weak var gameStartButton: CustomListButton!
+    @IBOutlet weak var gameAIButton: CustomListButton!
+    @IBOutlet weak var emptyLeft: CustomListButton!
+    @IBOutlet weak var emptyRight: CustomListButton!
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         setButton()
-        
- 
     }
     
-
     func setButton() {
-        let buttonLength: CGFloat = MainViewController.BUTTON_LENGTH
-        
-        self.gameStartButton.frame = CGRect(x: (UIScreen.main.bounds.width - buttonLength) / 2,
-                                            y: (UIScreen.main.bounds.height - buttonLength) / 2,
+        self.gameStartButton.frame = CGRect(x: width / 2 + 15,
+                                            y: height / 2 - buttonLength - 15,
                                             width: buttonLength,
                                             height: buttonLength)
         
+        self.emptyLeft.frame = CGRect(x: width / 2 - buttonLength - 15,
+                                            y: height / 2 - buttonLength - 15,
+                                            width: buttonLength,
+                                            height: buttonLength)
         
+        self.gameAIButton.frame = CGRect(x: width / 2 - buttonLength - 15,
+                                      y: height / 2 + 15,
+                                      width: buttonLength,
+                                      height: buttonLength)
+        
+        self.emptyRight.frame = CGRect(x: width / 2 + 15,
+                                         y: height / 2 + 15,
+                                         width: buttonLength,
+                                         height: buttonLength)
     }
     
     
