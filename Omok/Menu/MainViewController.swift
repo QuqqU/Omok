@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
     
     var listVC: UIViewController?
     var beginVC: UIViewController?
+    var gameVC: UIViewController?
     var isBeginViewShowing = true
     
 
@@ -47,6 +48,10 @@ class MainViewController: UIViewController {
         }
     }
     
+    
+    
+    
+    
     func getListView() {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list_navi") as? UINavigationController {
             self.listVC = vc
@@ -55,6 +60,9 @@ class MainViewController: UIViewController {
             self.view.addSubview(vc.view)
             vc.didMove(toParentViewController: self)
             self.view.bringSubview(toFront: (self.beginVC?.view)!)
+            
+            let _listVC = vc.viewControllers[0] as? ListViewController
+            _listVC?.delegate = self
         }
     }
     
@@ -69,6 +77,37 @@ class MainViewController: UIViewController {
                                        animations: { self.listVC?.view.alpha = 1 },
                                        completion: nil)
         })
+    }
+    
+    
+    
+    
+    
+    func getGameView() {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "game_navi") as? UINavigationController {
+            self.gameVC = vc
+            self.gameVC?.view.alpha = 0
+            self.addChildViewController(vc)
+            self.view.addSubview(vc.view)
+            vc.didMove(toParentViewController: self)
+            self.view.bringSubview(toFront: (self.listVC?.view)!)
+        }
+    }
+    
+    
+    func openGameView(_ complete: ( () -> Void )?) {
+        print("Turn to Game View")
+        self.getGameView()
+        
+        UIView.animate(withDuration: TimeInterval(self.SLIDE_TIME),
+                       animations: { self.listVC?.view.alpha = 0 },
+                       completion: { (finished: Bool) -> Void in
+                        UIView.animate(withDuration: TimeInterval(self.SLIDE_TIME),
+                                       animations: { self.gameVC?.view.alpha = 1 },
+                                       completion: nil)
+        })
+        
+        
     }
     
 }
