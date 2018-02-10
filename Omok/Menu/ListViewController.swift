@@ -15,6 +15,9 @@ class ListViewController: UIViewController {
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
     
+    var delegate: MainViewController?
+    
+    
     @IBOutlet weak var gameStartButton: CustomListButton!
     @IBOutlet weak var gameAIButton: CustomListButton!
     @IBOutlet weak var emptyLeft: CustomListButton!
@@ -47,6 +50,13 @@ class ListViewController: UIViewController {
                                          y: height / 2 + 15,
                                          width: buttonLength,
                                          height: buttonLength)
+    }
+    
+    
+
+    @IBAction func gameStart(_ sender: Any) {
+        print("1:1 button touched")
+        self.delegate?.openGameView(nil)
     }
     
     
