@@ -42,7 +42,7 @@ class Manager {
         toEmptyState : for y in 0..<19 {
             for x in 0..<19 {
                 let cell = tempBoard[y][x]
-                if cell == .uncreated || cell == .border {
+                if cell == .uncreated {
                     for dy in -1..<2 {
                         for dx in -1..<2 {
                             if 0..<19 ~= y+dy && 0..<19 ~= x+dx {
@@ -56,26 +56,6 @@ class Manager {
                 }
             }
         }
-        
-        tempBoard = self.board.map{$0.map{$0.cellState}}
-        toBorderState : for y in 0..<19 {
-            for x in 0..<19 {
-                let cell = tempBoard[y][x]
-                if cell == .uncreated {
-                    for dy in -1..<2 {
-                        for dx in -1..<2 {
-                            if 0..<19 ~= y+dy && 0..<19 ~= x+dx {
-                                let neighbor = tempBoard[y+dy][x+dx]
-                                if neighbor == .empty {
-                                    self.board[y][x].changeCellState(.border)
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
     }
 }
 

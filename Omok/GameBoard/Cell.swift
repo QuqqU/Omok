@@ -87,8 +87,6 @@ class Cell: UIButton {
         case .placeholding:
             changeImage(named: self.isCirclePoint ? "placeholder_pt.png" : "placeholder.png")
         case .uncreated: break
-        case .border:
-            changeImage(named: "borderTop.png")
         }
     }
     

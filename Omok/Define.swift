@@ -17,7 +17,6 @@ enum State {
     case p1
     case placeholding
     case uncreated
-    case border
     
     mutating func turnOver() {
         switch self {
