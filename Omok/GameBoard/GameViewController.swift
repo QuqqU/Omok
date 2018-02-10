@@ -23,9 +23,9 @@ class GameViewController: UIViewController {
      
         
         self.gameBoardFrameView = GameBoardFrameView(frame: CGRect(x: 0.0,
-                                                                   y: (height - width) / 2,
+                                                                   y: 100,
                                                                    width: width,
-                                                                   height: width))
+                                                                   height: height-150))
         print("Game Board View is built");
         
         self.gameBoardFrameView.delegate = self
