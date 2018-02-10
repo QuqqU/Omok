@@ -29,4 +29,6 @@ enum State {
     }
 }
 
+typealias Pos = (x:Int, y:Int)
+
 

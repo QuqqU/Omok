@@ -18,6 +18,7 @@ class Manager {
     let width: CGFloat
     let height: CGFloat
     var rootViewController: GameViewController?
+    var history:Array<Pos>
     
     init(){
         board = [[Cell]]()
@@ -25,16 +26,11 @@ class Manager {
         turn = .p0
         width = UIScreen.main.bounds.width
         height = UIScreen.main.bounds.height
+        history = []
     }
 
     func turnOver() {
         self.turn.turnOver()
-    }
-    
-    func isGameFinished() -> Bool {
-        let isFinished = checkHorizontal() || checkVertical() || checkDiagonal()
-        if isFinished { return true }
-        else { return false }
     }
     
     func updateField() {
@@ -54,6 +50,34 @@ class Manager {
                         }
                     }
                 }
+            }
+        }
+    }
+    
+    func clearField() {
+        for x in 0..<19 {
+            for y in 0..<19 {
+                if self.board[y][x].cellState != .uncreated { self.board[y][x].changeCellState(.empty) }
+            }
+        }
+    }
+    
+    func checkFinished() {
+        if self.checkHorizontal() || self.checkVertical() || self.checkDiagonal() {
+            Manager.manager.clearField()
+            var player = 1
+            var i:Double = 0
+            let len:Double = Double(Manager.manager.board.count)
+            
+            for pos in Manager.manager.history {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .microseconds(Int(i/len*1000000))) {
+                    let pos = pos
+                    Manager.manager.board[pos.y][pos.x].changeCellState(player == 1 ? .p0 : .p1)
+                    Manager.manager.board[pos.y][pos.x].changeImage(named: player == 1 ? "placed.png" : "revealed.png")
+                    Manager.manager.board[pos.y][pos.x].didChangeValue(forKey: "backgoundImage")
+                    player *= -1
+                }
+                i += 1
             }
         }
     }
