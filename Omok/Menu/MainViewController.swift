@@ -54,7 +54,8 @@ class MainViewController: UIViewController {
             self.addChildViewController(vc)
             self.view.addSubview(vc.view)
             vc.didMove(toParentViewController: self)
-            self.view.bringSubview(toFront: (self.beginVC?.view)!)        }
+            self.view.bringSubview(toFront: (self.beginVC?.view)!)
+        }
     }
     
     func openListView(_ complete: ( () -> Void )?) {
