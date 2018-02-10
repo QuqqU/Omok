@@ -32,12 +32,18 @@ class MainViewController: UIViewController {
     func setupBeginView() {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "begin_navi") as? UINavigationController {
             self.beginVC = vc
+            self.beginVC?.view.alpha = 0
             self.addChildViewController(vc)
             self.view.addSubview(vc.view)
             vc.didMove(toParentViewController: self)
             
             let _beginVC = vc.viewControllers[0] as? BeginViewController
             _beginVC?.delegate = self
+            
+            UIView.animate(withDuration: TimeInterval(self.SLIDE_TIME),
+                           animations: { self.beginVC?.view.alpha = 1 },
+                           completion: nil)
+            
         }
     }
     
