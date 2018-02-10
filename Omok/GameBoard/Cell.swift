@@ -12,14 +12,12 @@ class Cell: UIButton {
     var cellState: State
     
     private let isCirclePoint: Bool
-    let x:Int
-    let y:Int
+    let pos:Pos
     
     init(frame: CGRect, isCirclePoint: Bool, x: Int ,y:Int) {
         cellState = .uncreated
         self.isCirclePoint = isCirclePoint
-        self.x = x
-        self.y = y
+        self.pos = (x:x, y:y)
         super.init(frame: frame)
         self.setBackgroundImage(UIImage(named: "uncreated.png"), for: .normal)
     }
@@ -43,34 +41,10 @@ class Cell: UIButton {
             self.changeCellState(.placeholding)
         case .placeholding:
             self.changeCellState(Manager.manager.turn == .p0 ? .p0 : .p1)
-            if Manager.manager.isGameFinished() {
-                
-                guard let rootViewController: UIViewController = UIApplication.shared.windows[0].rootViewController else {
-                    return
-                }
-                
-                //////////////////////////////////
-                //////////////////////////////////
-                //객체화 필수
-                
-                let alert = UIAlertController(title: "기모띠", message: "기모리", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                
-                for cells in Manager.manager.board {
-                    for cell in cells {
-                        cell.cellState = .empty
-                        cell.setBackgroundImage(UIImage(named: "empty.png"), for: .normal)
-                    }
-                }
-                
-                rootViewController.present(alert, animated: true, completion: nil)
-                
-                
-                ///////////////////////////////////
-                ///////////////////////////////////
-            }
-            Manager.manager.turnOver()
+            Manager.manager.history.append(pos)
             Manager.manager.updateField()
+            Manager.manager.checkFinished()
+            Manager.manager.turnOver()
         default: ()
         }
     }
@@ -83,10 +57,11 @@ class Cell: UIButton {
         case .p0:
             changeImage(named: "placed.png")
         case .p1:
-            changeImage(named: "revealed.png")
+            changeImage(named: "placed.png")
         case .placeholding:
             changeImage(named: self.isCirclePoint ? "placeholder_pt.png" : "placeholder.png")
-        case .uncreated: break
+        case .uncreated:
+            changeImage(named: "uncreated.png")
         }
     }
     
