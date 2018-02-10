@@ -10,6 +10,10 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    
+    
+    @IBOutlet weak var backButton: UIButton!
+    
     var gameBoardFrameView: GameBoardFrameView!
     
     override func viewDidLoad() {
@@ -33,7 +37,9 @@ class GameViewController: UIViewController {
         self.view.addSubview(self.gameBoardFrameView!)
     }
     
-
+    @IBAction func goBack(_ sender: Any) {
+    }
+    
 }
 
 extension GameViewController: UIScrollViewDelegate {
