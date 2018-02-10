@@ -8,16 +8,12 @@
 
 import UIKit
 
-@IBDesignable class CustomButton: UIButton {
+@IBDesignable class CustomStartButton: UIButton {
 
-    let LENGTH: CGFloat = MainViewController.BUTTON_LENGTH
+    let LENGTH: CGFloat = MainViewController.START_BUTTON_LENGTH
     
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
-    
-        
-        
-        //make
         path.move(to: CGPoint(x: 5, y: LENGTH / 2 - 5))
         
         path.addLine(to: CGPoint(x: LENGTH / 2 - 5, y: 5))
@@ -41,7 +37,5 @@ import UIKit
         UIColor.white.setStroke()
         path.stroke()
     }
- 
 
-    
 }

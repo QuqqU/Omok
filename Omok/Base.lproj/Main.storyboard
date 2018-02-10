@@ -25,16 +25,7 @@
                     <view key="view" contentMode="scaleToFill" id="nXH-ds-wtw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이 화면은 나오면 안되지롱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQ8-fv-h2L">
-                                <rect key="frame" x="100" y="323" width="175" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="kYZ-zL-tnk"/>
                     </view>
                 </viewController>
@@ -46,11 +37,11 @@
         <scene sceneID="9pZ-51-bM2">
             <objects>
                 <viewController storyboardIdentifier="begin_view" id="V8Z-1o-3ES" customClass="BeginViewController" customModule="Omok" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qiK-YJ-zpP" customClass="DrawCGView" customModule="Omok" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="qiK-YJ-zpP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQY-fh-lly" customClass="CustomButton" customModule="Omok" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQY-fh-lly" customClass="CustomStartButton" customModule="Omok" customModuleProvider="target">
                                 <rect key="frame" x="85" y="235" width="256" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Binggrae" family="Binggrae" pointSize="45"/>
@@ -60,7 +51,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.85398203016201002" green="0.8704106120908629" blue="0.77765799728085461" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="yOg-MF-wmN"/>
                     </view>
                     <navigationItem key="navigationItem" id="xI8-Wa-DnD"/>
@@ -76,7 +67,7 @@
         <scene sceneID="FOl-mc-lZr">
             <objects>
                 <viewController id="LBg-Lr-lTj" customClass="ListViewController" customModule="Omok" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vet-36-Ygq" customClass="DrawCGView" customModule="Omok" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="Vet-36-Ygq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -87,23 +78,44 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv6-c2-jUu" customClass="CustomButton" customModule="Omok" customModuleProvider="target">
-                                <rect key="frame" x="53" y="241" width="269" height="264"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv6-c2-jUu" customClass="CustomListButton" customModule="Omok" customModuleProvider="target">
+                                <rect key="frame" x="178" y="191" width="137" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="37"/>
-                                <state key="normal" title="앙 시작버튼 띠"/>
+                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="45"/>
+                                <state key="normal" title="1 : 1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="RJh-m3-1n5" kind="show" id="BdQ-BK-1Ft">
                                         <nil key="action"/>
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFH-uj-97A" customClass="CustomListButton" customModule="Omok" customModuleProvider="target">
+                                <rect key="frame" x="24" y="347" width="154" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="45"/>
+                                <state key="normal" title="A.I.">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqb-O3-pnV" customClass="CustomListButton" customModule="Omok" customModuleProvider="target">
+                                <rect key="frame" x="51" y="208" width="92" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLc-bP-xsX" customClass="CustomListButton" customModule="Omok" customModuleProvider="target">
+                                <rect key="frame" x="223" y="389" width="46" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.85398203019999996" green="0.87041061210000004" blue="0.77765799729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="5YO-ic-EYO"/>
                     </view>
                     <navigationItem key="navigationItem" title="첫 화면" id="nLa-JT-36V"/>
                     <connections>
+                        <outlet property="emptyLeft" destination="Sqb-O3-pnV" id="Slc-RU-KAd"/>
+                        <outlet property="emptyRight" destination="kLc-bP-xsX" id="7n2-Ms-lN5"/>
+                        <outlet property="gameAIButton" destination="DFH-uj-97A" id="qoh-VQ-G3l"/>
                         <outlet property="gameStartButton" destination="nv6-c2-jUu" id="B2s-gp-q5L"/>
                     </connections>
                 </viewController>
@@ -118,7 +130,7 @@
                     <view key="view" contentMode="scaleToFill" id="hVI-2x-zUh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.85398203019999996" green="0.87041061210000004" blue="0.77765799729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="k2x-QF-8us"/>
                     </view>
