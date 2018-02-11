@@ -53,8 +53,14 @@ class GameViewController: UIViewController {
   
     @IBAction func goBack(_ sender: Any) {
         print("Going to ListView Button touched")
-        Manager.manager.initField()
-        self.delegate?.backToList()
+
+        let alert = UIAlertController(title: "Return to Menu?", message: "Game history is deleted.\nIs it okay?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default) { (_) in
+            self.delegate?.backToList()
+            
+        })
+        alert.addAction(UIAlertAction(title: "No", style: .cancel))
+        self.present(alert, animated: false, completion: nil)
     }
     @IBAction func reviewAfter(_ sender: Any) {
         Manager.manager.reviewAfter()

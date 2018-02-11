@@ -127,9 +127,8 @@ class MainViewController: UIViewController {
                        completion: { (finished: Bool) -> Void in
                         UIView.animate(withDuration: TimeInterval(self.SLIDE_TIME),
                                        animations: { self.listVC?.view.alpha = 1 },
-                                       completion: nil)
+                                       completion: { (_) in Manager.manager.initField() })
         })
-        
     }
 }
 
