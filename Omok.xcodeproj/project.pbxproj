@@ -43,7 +43,7 @@
 		6756EE2520262837003620B0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6756EE272026DA71003620B0 /* CustomStartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStartButton.swift; sourceTree = "<group>"; };
 		675A2862202F35FD007B6D77 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		6795A2892024E4F200019E57 /* who'stone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "who'stone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6795A2892024E4F200019E57 /* Who'Stone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Who'Stone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6795A28C2024E4F200019E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6795A2912024E4F200019E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6795A2932024E4F200019E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		6795A28A2024E4F200019E57 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6795A2892024E4F200019E57 /* who'stone.app */,
+				6795A2892024E4F200019E57 /* Who'Stone.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 			);
 			name = Omok;
 			productName = Omok;
-			productReference = 6795A2892024E4F200019E57 /* who'stone.app */;
+			productReference = 6795A2892024E4F200019E57 /* Who'Stone.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -400,7 +400,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JKU.Omok;
-				PRODUCT_NAME = "who'stone";
+				PRODUCT_NAME = "Who'Stone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,7 +416,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JKU.Omok;
-				PRODUCT_NAME = "who'stone";
+				PRODUCT_NAME = "Who'Stone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
