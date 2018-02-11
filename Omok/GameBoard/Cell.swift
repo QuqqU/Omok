@@ -27,25 +27,27 @@ class Cell: UIButton {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        switch self.cellState {
-        case .empty:
-            //if there is previous placeholder in board, delete it.
-            for cells in Manager.manager.board {
-                for cell in cells {
-                    if cell.cellState == .placeholding {
-                        cell.changeCellState(.empty)
+        if (Manager.manager.isPlaying) {
+            switch self.cellState {
+            case .empty:
+                //if there is previous placeholder in board, delete it.
+                for cells in Manager.manager.board {
+                    for cell in cells {
+                        if cell.cellState == .placeholding {
+                            cell.changeCellState(.empty)
+                        }
                     }
                 }
+                //placeholding in selected position.
+                self.changeCellState(.placeholding)
+            case .placeholding:
+                self.changeCellState(Manager.manager.turn == .p0 ? .p0 : .p1)
+                Manager.manager.history.append(pos)
+                Manager.manager.updateField()
+                Manager.manager.checkFinished()
+                Manager.manager.turnOver()
+            default: ()
             }
-            //placeholding in selected position.
-            self.changeCellState(.placeholding)
-        case .placeholding:
-            self.changeCellState(Manager.manager.turn == .p0 ? .p0 : .p1)
-            Manager.manager.history.append(pos)
-            Manager.manager.updateField()
-            Manager.manager.checkFinished()
-            Manager.manager.turnOver()
-        default: ()
         }
     }
     

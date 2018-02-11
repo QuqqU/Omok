@@ -163,6 +163,22 @@
                                     <action selector="goBack:" destination="RJh-m3-1n5" eventType="touchUpInside" id="3Rc-DY-4cm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgp-Op-iLH">
+                                <rect key="frame" x="48" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Before"/>
+                                <connections>
+                                    <action selector="reviewBefore:" destination="RJh-m3-1n5" eventType="touchUpInside" id="bcC-DE-Sch"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riv-CA-an5">
+                                <rect key="frame" x="285" y="617" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="After"/>
+                                <connections>
+                                    <action selector="reviewAfter:" destination="RJh-m3-1n5" eventType="touchUpInside" id="b3u-kf-bvo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
@@ -171,6 +187,8 @@
                     <navigationItem key="navigationItem" id="FWR-jP-tOT"/>
                     <connections>
                         <outlet property="backButton" destination="ubh-mj-qiw" id="TCT-NY-33Q"/>
+                        <outlet property="reviewAfter" destination="riv-CA-an5" id="JJW-cj-8yz"/>
+                        <outlet property="reviewBefore" destination="Vgp-Op-iLH" id="uDg-6Q-gaq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYn-Ya-E3U" sceneMemberID="firstResponder"/>
@@ -314,4 +332,5 @@
             <point key="canvasLocation" x="-1319" y="1132"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -17,8 +17,11 @@ class Manager {
     var turn: State
     let width: CGFloat
     let height: CGFloat
+    
     var rootViewController: GameViewController?
     var history:Array<Pos>
+    var historyFlag:Int = 0
+    var isPlaying: Bool = true
     
     init(){
         board = [[Cell]]()
@@ -62,23 +65,66 @@ class Manager {
         }
     }
     
+    func initField() {
+        makeRow : for y in 0..<19 {
+            makeColumn : for x in 0..<19 {
+                Manager.manager.board[y][x].changeCellState(.uncreated)
+            }
+        }
+        self.historyFlag = 0
+        self.history.removeAll()
+        self.turn = .p0
+        self.isPlaying = true
+        
+        Manager.manager.board[9][9].changeCellState(.empty)
+        Manager.manager.updateField()
+    }
+    
     func checkFinished() {
         if self.checkHorizontal() || self.checkVertical() || self.checkDiagonal() {
-            Manager.manager.clearField()
-            var player = 1
+            self.clearField()
+            self.isPlaying = false
             var i:Double = 0
             let len:Double = Double(Manager.manager.board.count)
+            self.turn = .p0
             
-            for pos in Manager.manager.history {
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .microseconds(Int(i/len*1000000))) {
+            for pos in self.history {
+                let turn = self.turn
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .microseconds(Int(i/len*2500000))) {
                     let pos = pos
-                    Manager.manager.board[pos.y][pos.x].changeCellState(player == 1 ? .p0 : .p1)
-                    Manager.manager.board[pos.y][pos.x].changeImage(named: player == 1 ? "placed.png" : "revealed.png")
-                    Manager.manager.board[pos.y][pos.x].didChangeValue(forKey: "backgoundImage")
-                    player *= -1
+                    self.board[pos.y][pos.x].changeCellState(turn)
+                    self.board[pos.y][pos.x].changeImage(named: turn == .p0 ? "placed.png" : "revealed.png")
+                    self.board[pos.y][pos.x].didChangeValue(forKey: "backgoundImage")
                 }
+                self.turn.turnOver()
                 i += 1
             }
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .microseconds(Int((i)/len*2500000))) {
+                self.rootViewController?.reviewAfter.isEnabled = true
+                self.rootViewController?.reviewBefore.isEnabled = true
+                self.rootViewController?.reviewAfter.isHidden = false
+                self.rootViewController?.reviewBefore.isHidden = false
+                self.historyFlag = self.history.count
+            }
+        }
+    }
+    
+    func reviewBefore() {
+        if 0..<self.history.count ~= self.historyFlag-1 {
+            self.historyFlag -= 1
+            let pos = self.history[self.historyFlag]
+            self.board[pos.y][pos.x].changeCellState(.empty)
+            self.turn.turnOver()
+        }
+    }
+    
+    func reviewAfter() {
+        if 0..<self.history.count ~= self.historyFlag {
+            let pos = self.history[self.historyFlag]
+            self.historyFlag += 1
+            self.turn.turnOver()
+            self.board[pos.y][pos.x].changeCellState(self.turn)
+            self.board[pos.y][pos.x].changeImage(named: self.turn == .p0 ? "placed.png" : "revealed.png")
         }
     }
 }

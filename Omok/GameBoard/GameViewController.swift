@@ -13,6 +13,8 @@ class GameViewController: UIViewController {
     
     
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var reviewAfter: UIButton!
+    @IBOutlet weak var reviewBefore: UIButton!
     
     var gameBoardFrameView: GameBoardFrameView!
     
@@ -22,6 +24,11 @@ class GameViewController: UIViewController {
         //forbid swipe to previous view
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         self.navigationController?.navigationBar.isHidden = true
+        
+        self.reviewAfter.isEnabled = false
+        self.reviewBefore.isEnabled = false
+        self.reviewAfter.isHidden = true
+        self.reviewBefore.isHidden = true
         
         let height = Manager.manager.height
         let width = Manager.manager.width
@@ -34,12 +41,20 @@ class GameViewController: UIViewController {
         print("Game Board View is built");
         
         self.gameBoardFrameView.delegate = self
+        Manager.manager.rootViewController = self
         self.view.addSubview(self.gameBoardFrameView!)
+        self.reviewBefore.frame = CGRect(x:0, y:height-50, width:width/2, height:50)
+        self.reviewAfter.frame = CGRect(x:width/2, y:height-50, width:width/2, height:50)
     }
     
     @IBAction func goBack(_ sender: Any) {
     }
-    
+    @IBAction func reviewAfter(_ sender: Any) {
+        Manager.manager.reviewAfter()
+    }
+    @IBAction func reviewBefore(_ sender: Any) {
+        Manager.manager.reviewBefore()
+    }
 }
 
 extension GameViewController: UIScrollViewDelegate {
@@ -47,4 +62,5 @@ extension GameViewController: UIScrollViewDelegate {
         return self.gameBoardFrameView.gameBoard
     }
 }
+
 
