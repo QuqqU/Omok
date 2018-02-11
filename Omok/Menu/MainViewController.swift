@@ -128,7 +128,7 @@ class MainViewController: UIViewController {
                         UIView.animate(withDuration: TimeInterval(self.SLIDE_TIME),
                                        animations: { self.listVC?.view.alpha = 1 },
                                        completion: nil)
-        }, )
+        })
         
     }
 }
