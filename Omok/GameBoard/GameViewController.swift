@@ -60,7 +60,7 @@ class GameViewController: UIViewController {
             
         })
         alert.addAction(UIAlertAction(title: "No", style: .cancel))
-        self.present(alert, animated: false, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     @IBAction func reviewAfter(_ sender: Any) {
         Manager.manager.reviewAfter()

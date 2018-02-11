@@ -120,6 +120,9 @@
                                 <state key="normal" title="A.I.">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="AIGameStart:" destination="LBg-Lr-lTj" eventType="touchUpInside" id="LJO-Lx-NND"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqb-O3-pnV" customClass="CustomListButton" customModule="Omok" customModuleProvider="target">
                                 <rect key="frame" x="51" y="208" width="92" height="79"/>

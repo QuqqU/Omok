@@ -59,5 +59,10 @@ class ListViewController: UIViewController {
         self.delegate?.openGameView(nil)
     }
     
+    @IBAction func AIGameStart(_ sender: Any) {
+        let alert = UIAlertController(title: "AI's gone to lunch now.", message: "Did you have lunch?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Let's go to lunch", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
 }
