@@ -76,6 +76,8 @@ class Manager {
         self.turn = .p0
         self.isPlaying = true
         
+        self.rootViewController?.gameBoardFrameView.zoomScale = 1
+        
         Manager.manager.board[9][9].changeCellState(.empty)
         Manager.manager.updateField()
     }

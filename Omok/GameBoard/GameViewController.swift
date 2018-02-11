@@ -46,11 +46,14 @@ class GameViewController: UIViewController {
         self.view.addSubview(self.gameBoardFrameView!)
         self.reviewBefore.frame = CGRect(x:0, y:height-50, width:width/2, height:50)
         self.reviewAfter.frame = CGRect(x:width/2, y:height-50, width:width/2, height:50)
+        self.backButton.frame = CGRect(x:10, y:UIApplication.shared.statusBarFrame.height,
+                                      width:100, height:100-UIApplication.shared.statusBarFrame.height)
     }
     
   
     @IBAction func goBack(_ sender: Any) {
         print("Going to ListView Button touched")
+        Manager.manager.initField()
         self.delegate?.backToList()
     }
     @IBAction func reviewAfter(_ sender: Any) {
