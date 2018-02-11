@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var reviewBefore: UIButton!
     
     var gameBoardFrameView: GameBoardFrameView!
+    var delegate: MainViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,10 @@ class GameViewController: UIViewController {
         self.reviewAfter.frame = CGRect(x:width/2, y:height-50, width:width/2, height:50)
     }
     
+  
     @IBAction func goBack(_ sender: Any) {
+        print("Going to ListView Button touched")
+        self.delegate?.backToList()
     }
     @IBAction func reviewAfter(_ sender: Any) {
         Manager.manager.reviewAfter()

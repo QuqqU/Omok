@@ -21,7 +21,6 @@ class MainViewController: UIViewController {
     var beginVC: UIViewController?
     var gameVC: UIViewController?
     var isBeginViewShowing = true
-    
 
     
     override func viewDidLoad() {
@@ -53,6 +52,8 @@ class MainViewController: UIViewController {
     
     
     func getListView() {
+        if self.listVC != nil { return }
+        
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list_navi") as? UINavigationController {
             self.listVC = vc
             self.listVC?.view.alpha = 0
@@ -84,6 +85,8 @@ class MainViewController: UIViewController {
     
     
     func getGameView() {
+        if self.gameVC != nil { return }
+        
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "game_navi") as? UINavigationController {
             self.gameVC = vc
             self.gameVC?.view.alpha = 0
@@ -91,6 +94,9 @@ class MainViewController: UIViewController {
             self.view.addSubview(vc.view)
             vc.didMove(toParentViewController: self)
             self.view.bringSubview(toFront: (self.listVC?.view)!)
+            
+            let _gameVC = vc.viewControllers[0] as? GameViewController
+            _gameVC?.delegate = self
         }
     }
     
@@ -106,8 +112,43 @@ class MainViewController: UIViewController {
                                        animations: { self.gameVC?.view.alpha = 1 },
                                        completion: nil)
         })
-        
-        
     }
     
+    
+    
+    
+    
+    func backToList() {
+        print("Back to List View")
+        getListView()
+        
+        UIView.animate(withDuration: TimeInterval(self.SLIDE_TIME),
+                       animations: { self.gameVC?.view.alpha = 0 },
+                       completion: { (finished: Bool) -> Void in
+                        UIView.animate(withDuration: TimeInterval(self.SLIDE_TIME),
+                                       animations: { self.listVC?.view.alpha = 1 },
+                                       completion: nil)
+        })
+        
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
