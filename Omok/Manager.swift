@@ -76,6 +76,11 @@ class Manager {
         self.turn = .p0
         self.isPlaying = true
         
+        self.rootViewController?.reviewAfter.isEnabled = false
+        self.rootViewController?.reviewBefore.isEnabled = false
+        self.rootViewController?.reviewAfter.isHidden = true
+        self.rootViewController?.reviewBefore.isHidden = true
+        
         self.rootViewController?.gameBoardFrameView.zoomScale = 1
         
         Manager.manager.board[9][9].changeCellState(.empty)
