@@ -88,7 +88,7 @@ class Manager {
     }
     
     func checkFinished() {
-        if self.checkHorizontal() || self.checkVertical() || self.checkDiagonal() {
+        if self.checkHorizontal() || self.checkVertical() || self.checkLeftDiagonal() || self.checkRightDiagonal() {
             self.clearField()
             self.isPlaying = false
             var i:Double = 0
@@ -167,11 +167,34 @@ extension Manager {
         return false
     }
     
-    private func checkDiagonal() -> Bool {
-        
-        
-        
-        
+    private func checkLeftDiagonal() -> Bool {
+        X : for x in 0...board.count-5 {
+            Y : for y in 0...board.count-5 {
+                delta : for d in 0..<5 {
+                    if board[x + d][y + d].cellState != turn { continue Y }
+                }
+                if (x + 5 == 19 || y + 5 == 19 || board[x + 5][y + 5].cellState != turn) &&
+                    (x == 0 || y == 0 || board[x - 1][y - 1].cellState != turn) {
+                    return true
+                }
+            }
+        }
         return false;
     }
+    
+    private func checkRightDiagonal() -> Bool {
+        X : for x in 4..<board.count {
+            Y : for y in 0...board.count-5 {
+                delta : for d in 0..<5 {
+                    if board[x - d][y + d].cellState != turn { continue Y }
+                }
+                if (x == 18 || y == 0 || board[x + 1][y - 1].cellState != turn) &&
+                    (x == 4 || y + 5 == 19 || board[x - 5][y + 5].cellState != turn) {
+                    return true
+                }
+            }
+        }
+        return false;
+    }
+    
 }
