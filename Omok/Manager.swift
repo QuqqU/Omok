@@ -92,12 +92,12 @@ class Manager {
             self.clearField()
             self.isPlaying = false
             var i:Double = 0
-            let len:Double = Double(Manager.manager.board.count)
+            //let len:Double = Double(Manager.manager.board.count)
             self.turn = .p0
             
             for pos in self.history {
                 let turn = self.turn
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .microseconds(Int(i/len*2500000))) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .microseconds(Int(i * 500000))) {
                     let pos = pos
                     self.board[pos.y][pos.x].changeCellState(turn)
                     self.board[pos.y][pos.x].changeImage(named: turn == .p0 ? "placed.png" : "revealed.png")
@@ -106,7 +106,7 @@ class Manager {
                 self.turn.turnOver()
                 i += 1
             }
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .microseconds(Int((i)/len*2500000))) {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .microseconds(Int(i * 500000))) {
                 self.rootViewController?.reviewAfter.isEnabled = true
                 self.rootViewController?.reviewBefore.isEnabled = true
                 self.rootViewController?.reviewAfter.isHidden = false
