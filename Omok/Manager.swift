@@ -95,9 +95,11 @@ class Manager {
             //let len:Double = Double(Manager.manager.board.count)
             self.turn = .p0
             
+         
             for pos in self.history {
                 let turn = self.turn
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .microseconds(Int(i * 500000))) {
+            
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .microseconds(Int(500000 * i))) {
                     let pos = pos
                     self.board[pos.y][pos.x].changeCellState(turn)
                     self.board[pos.y][pos.x].changeImage(named: turn == .p0 ? "placed.png" : "revealed.png")
@@ -105,6 +107,7 @@ class Manager {
                 }
                 self.turn.turnOver()
                 i += 1
+         
             }
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .microseconds(Int(i * 500000))) {
                 self.rootViewController?.reviewAfter.isEnabled = true
@@ -115,6 +118,10 @@ class Manager {
             }
         }
     }
+    
+    
+ 
+    
     
     func reviewBefore() {
         if 0..<self.history.count ~= self.historyFlag-1 {
